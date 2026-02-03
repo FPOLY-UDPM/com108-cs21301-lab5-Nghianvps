@@ -1,7 +1,7 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
- * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
- * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
+ * Họ và tên: [NGUYỄN VĂN NGHĨA]
+ * MSSV:      [PS43782]
+ * Lớp:       [COM108]
  *****************************************************************************/
 
 //  BÀI 1: XÂY DỰNG CHƯƠNG TRÌNH TÌM GIÁ TRỊ LỚN NHẤT TRONG 3 SỐ  
@@ -17,13 +17,42 @@
 // int max; 
 // //Cách giải để tìm ra số lớn nhất 
 // return max; 
-// } 
+// }
+
+int timSoMax(int so1, int so2, int so3)
+{
+    int timMax;
+    if (so1 >= so2 && so1 >= so3)
+    {
+        timMax = so1;
+    }
+    else if (so2 >= so1 && so2 >= so3)
+    {
+        timMax = so2;
+    }
+    else
+    {
+        timMax = so3;
+    }
+
+    return timMax;
+}
 
 int main() {
 
-    // //Gọi hàm trong hàm main 
-    // //ví dụ 
-    // int soMax = temHam(3,5,10)
-    
+    int so1, so2, so3;
+
+    printf("Nhap so 1: ");
+    scanf("%d", &so1);
+
+    printf("Nhap so 2: ");
+    scanf("%d", &so2);
+
+    printf("Nhap so 3: ");
+    scanf("%d", &so3);
+
+    int max_value = timSoMax(so1, so2, so3);
+    printf("So lon nhat la: %d\n", max_value);
+
     return 0;
 }
